@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import classes from "./QuoteForm.module.css";
 import Card from "./../UI/Card";
 import LoadingSpinner from "./../UI/LoadingSpinner";
-import { Prompt } from "react-router-dom";
 
 const QuoteForm = (props) => {
   const authorInputRef = useRef();
@@ -32,10 +31,6 @@ const QuoteForm = (props) => {
 
   return (
     <div>
-      <Prompt
-        when={isFocused}
-        message="Are you sure you want to leave? All you changes will be lost."
-      />
       <Card>
         <form
           onFocus={formFocusHandler}
